@@ -6,7 +6,6 @@ const person = (props) => {
 return (
     <Card className="card">
         <h1 onClick={props.click}>My name is {props.name} and I am {props.age} years old</h1>
-        <p>{props.children}</p>
         <input type="text" onChange={props.changed} value={props.name}></input>
     </Card>
     )
