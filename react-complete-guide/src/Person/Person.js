@@ -1,14 +1,17 @@
 import React from 'react';
-import Card from "@material-ui/core/Card"
-import './Person.css'
 
-const person = (props) => {
-return (
-    <Card className="card">
-        <h1 onClick={props.click}>My name is {props.name} and I am {props.age} years old</h1>
-        <input type="text" onChange={props.changed} value={props.name}></input>
-    </Card>
-    )
-}
+import classes from './Person.css';
+
+const person = props => {
+  return (
+    <div className={classes.Person}>
+      <p onClick={props.click}>
+        I'm {props.name} and I am {props.age} years old!
+      </p>
+      <p>{props.children}</p>
+      <input type="text" onChange={props.changed} value={props.name} />
+    </div>
+  );
+};
 
 export default person;
